@@ -8,8 +8,9 @@ import Setting from "./components/Setting";
 import Main from "./components/Main";
 
 function App() {
-  const [web3AuthNetwork, setWeb3AuthNetwork] = useState<WEB3AUTH_NETWORK_TYPE>("mainnet");
-  const [chain, setChain] = useState<CHAIN_CONFIG_TYPE>("mainnet");
+  const [web3AuthNetwork, setWeb3AuthNetwork] =
+    useState<WEB3AUTH_NETWORK_TYPE>("mainnet");
+  const [chain, setChain] = useState<CHAIN_CONFIG_TYPE>("solana");
 
   return (
     <div className={styles.container}>
@@ -24,9 +25,17 @@ function App() {
         <Main />
       </Web3AuthProvider>
       <footer className={styles.footer}>
-        <a href="https://github.com/Web3Auth/Web3Auth/tree/master/examples/react-app" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/Web3Auth/Web3Auth/tree/master/examples/react-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Source code {"  "}
-          <img className={styles.logo} src="/images/github-logo.png" alt="github-logo" />
+          <img
+            className={styles.logo}
+            src="/images/github-logo.png"
+            alt="github-logo"
+          />
         </a>
       </footer>
     </div>
